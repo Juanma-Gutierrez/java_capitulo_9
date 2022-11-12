@@ -1,5 +1,6 @@
-## ¿Cuáles serían los atributos de la clase PilotoDeFormula1? ¿Se te ocurren algunas instancias de esta clase?
+¿Cuáles serían los atributos de la clase PilotoDeFormula1? ¿Se te ocurren algunas instancias de esta clase?
 
+```
 Atributos:
 - nombre
 - equipo
@@ -11,3 +12,4 @@ Instancias:
 - fernandoAlonso
 - carlosSainz
 - louisHamilton
+```
