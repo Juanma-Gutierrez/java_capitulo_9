@@ -73,7 +73,7 @@ Haz una lista con los atributos que podría tener la clase caballo. A continuaci
 
 ## Conceptos Ejercicio 6
 
-Lista los atributos de la clase Alumno ¿Sería nombre uno de los atributos de la clase? Razona tu respuesta
+Lista los atributos de la clase Alumno ¿Sería nombre uno de los atributos de la clase? Razona tu respuesta.
 
 ## Conceptos Ejercicio 7
 
