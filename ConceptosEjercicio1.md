@@ -1,4 +1,4 @@
-¿Cuáles serían los atributos de la clase PilotoDeFormula1? ¿Se te ocurren algunas instancias de esta clase?
+¿Cuáles serían los atributos de la clase PilotoDeFormula1?
 
 ```
 Atributos:
@@ -7,7 +7,11 @@ Atributos:
 - ranking
 - victorias
 - carrerasRealizadas
+```
 
+¿Se te ocurren algunas instancias de esta clase?
+
+```
 Instancias:
 - fernandoAlonso
 - carlosSainz
