@@ -248,12 +248,22 @@ Guancho está comiendo
 
 Crea la clase Fracción. Los atributos serán numerador y denominador. Y algunos de los métodos pueden ser invierte, simplifica, multiplica, divide, etc.
 
+```
+Por ejemplo:
+Fracción 1: 2/5
+Fracción 2: 3/4
+Multiplicación de 2/5 por 3/4: 0.3
+División de 2/5 entre 3/4: 0,53
+Inversión de la fracción 2/5: 2,50
+Inversión de la fracción 3/4: 1,33
+```
+
 ## POO Ejercicio 5
 
 Crea la clase Pizza con los atributos y métodos necesarios. Sobre cada pizza se necesita saber el tamaño - mediana o familiar - el tipo - margarita, cuatro quesos o funghi - y su estado - pedida o servida. La clase debe almacenar información sobre el número total de pizzas que se han pedido y que se han servido. Siempre que se crea una pizza nueva, su estado es “pedida”. El siguiente código del programa principal debe dar la salida que se muestra:
 
 ```
-public class PedidosPizza {
+public class PooEjercicio5 {
     public static void main(String[] args) {
         Pizza p1 = new Pizza("margarita", "mediana");
         Pizza p2 = new Pizza("funghi", "familiar");
