@@ -87,6 +87,59 @@ Lista los atributos de la clase Alumno ¿Sería nombre uno de los atributos de l
 
 Implementa la clase Caballo vista en un ejercicio anterior. Pruébala creando instancias y aplicándole algunos métodos.
 
+```
+------------------------------------------
+Nombre: Bucefalo
+Peso:   480 Kg
+Sexo:   Macho
+Raza:   Alano
+Color:  Marrón
+------------------------------------------
+
+------------------------------------------
+Nombre: Rayo
+Peso:   525 Kg
+Sexo:   Macho
+Raza:   Árabe
+Color:  Gris
+------------------------------------------
+
+------------------------------------------
+Nombre: Spirit
+Peso:   470 Kg
+Sexo:   Macho
+Raza:   Pura sangre
+Color:  Negro
+------------------------------------------
+
+------------------------------------------
+Nombre: Princesa
+Peso:   425 Kg
+Sexo:   Hembra
+Raza:   Andaluz
+Color:  Blanco
+------------------------------------------
+
+------------------------------------------
+Nombre: Princesa
+Peso:   445 Kg
+Sexo:   Hembra
+Raza:   Andaluz
+Color:  Blanco
+------------------------------------------
+El caballo Bucefalo está al galope
+Sooooo Bucefalo!!
+A Rayo hay que darle de comer 26 kgs de heno
+A Princesa hay que darle de comer 22 kgs de heno
+¡¡Salta Spirit!!
+
+Lista de caballos del rancho:
+Bucefalo
+Rayo
+Spirit
+Princesa
+```
+
 ## POO Ejercicio 2
 
 Crea la clase Vehiculo, así como las clases Bicicleta y Coche como subclases de la primera. Para la clase Vehiculo, crea los atributos de clase vehiculosCreadosy kilometrosTotales, así como el atributo de instancia kilometrosRecorridos. Crea también algún método específico para cada una de las subclases. Prueba las clases creadas mediante un programa con un menú como el que se muestra a continuación:
