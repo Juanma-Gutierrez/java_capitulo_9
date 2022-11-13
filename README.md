@@ -162,6 +162,88 @@ Elige una opción (1-8):
 
 Crea las clases Animal, Mamifero, Ave, Gato, Perro, Canario, Pinguino y Lagarto. Crea, al menos, tres métodos específicos de cada clase y redefine el/los método/s cuando sea necesario. Prueba las clases creadas en un programa en el que se instancien objetos y se les apliquen métodos.
 
+```
+----- Clase perro -----
+Aquí tienes mi patita
+Guauuu, guauuu
+Raza: Collie
+Comida favorita: Carne
+----- Clase Mamífero -----
+Lassie esta corriendo
+Lassie esta saltando
+Lassie esta durmiendo
+----- Clase Animal -----
+Método getName: Lassie*
+Nombre: Lassie*
+Sexo: Hembra
+Lassie* está comiendo
+-------------------------
+
+
+----- Clase gato -----
+Puagh, eso no me gusta, quiero pescado
+Mmmm, me encanta el pescado
+Grrrrrr
+Miaauuu, miiiiaaauuuuu
+Raza: Minino
+Comida favorita: Canarios
+----- Clase Mamífero -----
+Silvestre esta corriendo
+Silvestre esta saltando
+Silvestre esta durmiendo
+----- Clase Animal -----
+Método getName: Silvestre*
+Nombre: Silvestre*
+Sexo: Macho
+Silvestre* está comiendo
+-------------------------
+
+
+----- Clase Canario -----
+Piopiopioooooo  piiipiiipiiipiopiopioPio pio
+Color: Amarillo
+Comida favorita: Alpiste
+Piolin esta volando
+----- Clase Ave -----
+Piolin esta corriendo
+Piolin esta poniendo un huevo
+Piolin esta durmiendo
+----- Clase Animal -----
+Método getName: Piolin*
+Nombre: Piolin*
+Sexo: Macho
+Piolin* está comiendo
+-------------------------
+
+
+----- Clase Pingüino -----
+Tap, tap, tap, mira mis pasos de baile
+¡¡Al agua patos!!
+Comida favorita: Pescado
+----- Clase Ave -----
+Kowalski esta corriendo
+Kowalski esta poniendo un huevo
+Kowalski esta durmiendo
+----- Clase Animal -----
+Método getName: Kowalski*
+Nombre: Kowalski*
+Sexo: Macho
+Kowalski* está comiendo
+-------------------------
+
+
+----- Clase Lagarto -----
+Que bien se esta aqui, tomando el sol como los lagartos
+He puesto un monton de huevos
+Comida favorita: Marron
+----- Clase Animal -----
+Método getName: Guancho
+Nombre: Guancho
+Sexo: Macho
+Guancho está comiendo
+-------------------------
+```
+
 ## POO Ejercicio 4
 
 Crea la clase Fracción. Los atributos serán numerador y denominador. Y algunos de los métodos pueden ser invierte, simplifica, multiplica, divide, etc.
