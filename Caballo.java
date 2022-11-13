@@ -1,5 +1,5 @@
 /**
- * Exercise: Caballo.java
+ * Exercise: Caballo.java PooEjercicio1.java
  *
  * @version: 13/11/2022
  * @author: Juan Manuel Gutiérrez

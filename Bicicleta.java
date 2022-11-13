@@ -1,5 +1,5 @@
 /**
- * Bicicleta.java
+ * Bicicleta.java PooEjercicio2.java
  *
  * @version: 13/11/2022
  * @author: Juan Manuel Gutiérrez
