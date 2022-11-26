@@ -336,12 +336,11 @@ public class Zona {
 El menú del programa debe ser el que se muestra a continuación. Cuando elegimos la opción 2, se nos debe preguntar para qué zona queremos las entradas y cuántas queremos. Lógicamente, el programa debe controlar que no se puedan vender más entradas de la cuenta.
 
 ```
-
 1. Mostrar número de entradas libres
 2. Vender entradas
 3. Salir
-
 ```
+
 
 ## POO Ejercicio 8
 
