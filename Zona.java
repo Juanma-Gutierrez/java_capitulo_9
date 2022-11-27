@@ -1,7 +1,7 @@
 /**
  * Zona.java
  *
- * @version: 26/11/2022
+ * @version: 27/11/2022
  * @author: Juan Manuel Gutiérrez
  *          https://github.com/Juanma-Gutierrez
  */

@@ -1,15 +1,14 @@
 /**
- * SalaVip.java
+ * ExpoCampanillas.java
  *
- * @version: 26/11/2022
+ * @version: 27/11/2022
  * @author: Juan Manuel Gutiérrez
  *          https://github.com/Juanma-Gutierrez
  */
 
-public class SalaVip extends Zona {
-
-    public SalaVip(int n) {
-        super(n);
+public class ExpoCampanillas extends Zona {
+    public ExpoCampanillas(int n) {
+        super(n); // Llama a la función padre Zona(n), creando el objeto ExpoCampanillas
     }
 
     public int getEntradasPorVender() {
