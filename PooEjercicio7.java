@@ -59,9 +59,9 @@ public class PooEjercicio7 {
         Zona salaVip;
 
         // Var init
-        salaPrincipal = new ExpoCampanillas(1000);
-        salaCompraVenta = new ExpoCampanillas(200);
-        salaVip = new ExpoCampanillas(25);
+        salaPrincipal = new Zona(1000);
+        salaCompraVenta = new Zona(200);
+        salaVip = new Zona(25);
 
         // Scanner class
         Scanner sc = new Scanner(System.in);
