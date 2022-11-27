@@ -347,7 +347,6 @@ El menú del programa debe ser el que se muestra a continuación. Cuando elegimo
 Implementa la clase Terminal. Un terminal tiene asociado un número. Los terminales se pueden llamar unos a otros y el tiempo de conversación corre para ambos. A continuación se proporciona el contenido del main y el resultado que debe aparecer por pantalla.
 
 ```
-
 Programa principal:
 Terminal t1 = new Terminal("678 11 22 33");
 Terminal t2 = new Terminal("644 74 44 69");
