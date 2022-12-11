@@ -24,6 +24,7 @@ public class CuentaCorriente {
         this.saldo = saldo;
     }
 
+    @Override
     public String toString() {
         return "Número de cta: " + this.numCuenta + " Saldo: " + this.saldo + " Euros";
     }

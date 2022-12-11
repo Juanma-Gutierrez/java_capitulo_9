@@ -11,10 +11,8 @@
  * forma aleatoria, que encajen bien y que estén bien colocadas según el juego
  * del dominó. No hay que controlar si se repiten o no las fichas.
  *
- * ```
  * Ejemplo:
  * [6|1][1|4][4|4][4| ][ |3][3|2][2|6][6|5]
- * ```
  */
 
 public class PooEjercicio15 {
@@ -27,20 +25,14 @@ public class PooEjercicio15 {
 
         // Ficha1 creation
         FichaDomino ficha1;
-        int num1;
-        int num2;
-        num1 = (int) (Math.random() * 7);
-        num2 = (int) (Math.random() * 7);
-        ficha1 = new FichaDomino(num1, num2);
+        ficha1 = new FichaDomino();
         System.out.print(ficha1);
         do {
             FichaDomino ficha2;
             boolean correcto;
             do {
                 correcto = false;
-                num1 = (int) (Math.random() * 7);
-                num2 = (int) (Math.random() * 7);
-                ficha2 = new FichaDomino(num1, num2);
+                ficha2 = new FichaDomino();
                 if (ficha1.getSide2() == ficha2.getSide1())
                     correcto = true;
                 else if (ficha1.getSide2() == ficha2.getSide2()) {

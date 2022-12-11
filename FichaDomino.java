@@ -10,11 +10,17 @@ public class FichaDomino {
     private int side1;
     private int side2;
 
+    public FichaDomino() {
+        this.side1 = (int) (Math.random()*7);
+        this.side2 = (int) (Math.random()*7);
+    }
+
     public FichaDomino(int side1, int side2) {
         this.side1 = side1;
         this.side2 = side2;
     }
 
+    @Override
     public String toString() {
         String side1;
         String side2;

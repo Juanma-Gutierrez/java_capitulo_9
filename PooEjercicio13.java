@@ -5,6 +5,7 @@
  * @author: Juan Manuel Gutiérrez
  *          https://github.com/Juanma-Gutierrez
  */
+
 /*
  * Implementa la clase CuentaCorriente. Cada cuenta corriente tiene un número de
  * cuenta de 10 dígitos. Para simplificar, el número de cuenta se genera de
@@ -14,8 +15,7 @@
  * posible hacer una transferencia entre una cuenta y otra. Se permite el saldo
  * negativo. En el siguiente capítulo se propone un ejercicio como mejora de
  * éste, en el que se pide llevar un registro de los movimientos realizados.
- * 
- * ```
+ *
  * Programa principal:
  * CuentaCorriente cuenta1 = new CuentaCorriente();
  * CuentaCorriente cuenta2 = new CuentaCorriente(1500);
@@ -38,7 +38,6 @@
  * Número de cta: 6942541557 Saldo: 1945,00 €
  * Número de cta: 9319536518 Saldo: 800,00 €
  * Número de cta: 7396941518 Saldo: 6175,00 €
- * ```
  */
 public class PooEjercicio13 {
     public static void main(String[] args) {
