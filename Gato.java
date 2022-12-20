@@ -19,6 +19,13 @@ public class Gato extends Mamifero {
 
     }
 
+    public Gato(String name, String sex, String breed, String favouriteFood) {
+        this.setName(name);
+        this.setSex(sex);
+        this.breed = breed;
+        this.favouriteFood = favouriteFood;
+    }
+
     /**
      * toString: muestra todos los datos del gato
      */
