@@ -19,7 +19,7 @@ public class PooEjercicioArrays3 {
         // Var init
         collection = new Disk[N];
         for (int i = 0; i < N; i++) {
-            collection[i] = new Disk(i);
+            collection[i] = new Disk(i + 1);
         }
 
         // Scanner class
@@ -58,10 +58,10 @@ public class PooEjercicioArrays3 {
                 createDisk(collection, sc);
                 break;
             case 2:
-                // aux = modifyDisk(sc);
+                menuModifyDisk(collection, sc);
                 break;
             case 3:
-                deleteDisk(collection, sc);
+                menuDeleteDisk(collection, sc);
                 break;
             case 4:
                 listCollection(collection, sc, N);
@@ -94,12 +94,21 @@ public class PooEjercicioArrays3 {
         return (collection);
     }
 
-    public static void modifyDisk(Scanner sc) {
+    public static Disk[] menuModifyDisk(Disk[] collection, Scanner sc) {
+        int code;
         clearScreen();
-        System.out.println("Modificar Disco");
+        sc.nextLine();
+        System.out.println("***********************");
+        System.out.println("*   MODIFICAR DISCO   *");
+        System.out.println("***********************");
+        System.out.println();
+        System.out.print("Introduce el código del disco: ");
+        code = sc.nextInt();
+        collection = modifyDisk(code, collection, sc);
+        return (collection);
     }
 
-    public static Disk[] deleteDisk(Disk[] collection, Scanner sc) {
+    public static Disk[] menuDeleteDisk(Disk[] collection, Scanner sc) {
         int code;
         clearScreen();
         sc.nextLine();
@@ -111,7 +120,6 @@ public class PooEjercicioArrays3 {
         code = sc.nextInt();
         collection = deleteDisk(code, collection, sc);
         return (collection);
-
     }
 
     public static void listCollection(Disk[] collection, Scanner sc, int N) {
@@ -124,7 +132,6 @@ public class PooEjercicioArrays3 {
             if (collection[i].getAuthor() != null)
                 System.out.print(collection[i]);
         }
-
         System.out.println("\n9: Volver al menú");
         sc.nextInt();
     }
@@ -135,39 +142,82 @@ public class PooEjercicioArrays3 {
     }
 
     public static Disk[] createBase(Disk[] collection) {
-        collection[0] = new Disk(
-                "Metallica",
-                "The black album",
-                "Rock",
-                63);
-        collection[1] = new Disk(
-                "The Doors",
-                "Riders on the storm",
-                "Rock",
-                72);
-        collection[2] = new Disk(
-                "Queen",
-                "Bohemian Rhapsody",
-                "Rock",
-                53);
-        collection[3] = new Disk(
-                "ACDC",
-                "Thunderstruck",
-                "Rock",
-                58);
+        collection[0].setAuthor("Metallica");
+        collection[0].setTitle("The black album");
+        collection[0].setGenre("Rock");
+        collection[0].setDuration(63);
+
+        collection[1].setAuthor("The Doors");
+        collection[1].setTitle("Riders on the storm");
+        collection[1].setGenre("Rock");
+        collection[1].setDuration(72);
+
+        collection[2].setAuthor("Queen");
+        collection[2].setTitle("Bohemian Rhapsody");
+        collection[2].setGenre("Rock");
+        collection[2].setDuration(53);
+
+        collection[3].setAuthor("ACDC");
+        collection[3].setTitle("Thunderstruck");
+        collection[3].setGenre("Rock");
+        collection[3].setDuration(58);
+
         return collection;
     }
 
     public static Disk[] addDisk(Disk newDisk, Disk[] collection) {
         int i = 0;
+        int code = 0;
         boolean find = false;
 
         while (i < collection.length && !find) {
             if (collection[i].getAuthor() == null) {
+                code = collection[i].getCode();
                 collection[i] = newDisk;
+                collection[i].setCode(code);
                 find = true;
             }
             i++;
+        }
+        return collection;
+    }
+
+    public static Disk[] modifyDisk(int code, Disk[] collection, Scanner sc) {
+        boolean confirm = false;
+        for (int i = 0; i < collection.length; i++) {
+            Disk modifiedDisk = new Disk();
+            String author;
+            String title;
+            String genre;
+            int duration;
+            if (collection[i].getCode() == code) {
+                Disk disk = collection[i];
+                System.out.println(disk);
+                System.out.println("\nIntroduce las modificaciones que precises:");
+                System.out.print("Autor (enter para no modificar): " + disk.getAuthor() + ": ");
+                sc.nextLine(); // limpieza del buffer
+                author = sc.nextLine();
+                if (author == "")
+                    author = disk.getAuthor();
+                System.out.print("Título (enter para no modificar): " + disk.getTitle() + ": ");
+                title = sc.nextLine();
+                if (title == "")
+                    title = disk.getTitle();
+                System.out.print("Género (enter para no modificar): " + disk.getGenre() + ": ");
+                genre = sc.nextLine();
+                if (genre == "")
+                    genre = disk.getGenre();
+                System.out.print("Duración: " + disk.getDuration() + ": ");
+                duration = sc.nextInt();
+                modifiedDisk.setCode(disk.getCode());
+                modifiedDisk.setAuthor(author);
+                modifiedDisk.setTitle(title);
+                modifiedDisk.setGenre(genre);
+                modifiedDisk.setDuration(duration);
+                confirm = confirm("modificar", modifiedDisk, sc);
+                if (confirm)
+                    collection[i] = modifiedDisk;
+            }
         }
         return collection;
     }
@@ -176,12 +226,9 @@ public class PooEjercicioArrays3 {
         boolean confirm = false;
         for (int i = 0; i < collection.length; i++) {
             if (collection[i].getCode() == code) {
-                confirm = confirmDelete(collection[i], sc);
+                confirm = confirm("eliminar", collection[i], sc);
                 if (confirm) {
-                    collection[i].setAuthor(null);
-                    collection[i].setTitle(null);
-                    collection[i].setGenre(null);
-                    collection[i].setDuration(0);
+                    collection[i].eraseDisk();
                 }
                 ;
             }
@@ -189,17 +236,16 @@ public class PooEjercicioArrays3 {
         return collection;
     }
 
-    public static boolean confirmDelete(Disk disk, Scanner sc) {
+    public static boolean confirm(String process, Disk disk, Scanner sc) {
         String res;
-        System.out.println("Se va a eliminar el siguiente registro:");
+        System.out.println("Se va a " + process + " el siguiente registro:");
         System.out.println(disk);
         System.out.print("¿Está seguro? (s/n): ");
         res = sc.next();
-        if (res.equals("s")||  res.equals("S")) {
+        if (res.equals("s") || res.equals("S")) {
             return true;
         } else {
             return false;
         }
     }
-
 }

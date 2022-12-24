@@ -13,6 +13,9 @@ public class Disk {
     private String genre;
     private int duration;
 
+    public Disk() {
+    }
+
     public Disk(int code) {
         this.code = code;
     }
@@ -26,13 +29,17 @@ public class Disk {
 
     public String toString() {
         String res;
-        res = "  Código: " + code + "\n";
+        res = "  Código: " + this.code + "\n";
         res += "  Autor: " + this.author + "\n";
         res += "  Título: " + this.title + "\n";
         res += "  Género: " + this.genre + "\n";
         res += "  Duración: " + this.duration + " minutos\n";
         res += "*******************************\n";
         return res;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
     }
 
     public int getCode() {
@@ -69,6 +76,13 @@ public class Disk {
 
     public int getDuration() {
         return this.duration;
+    }
+
+    public void eraseDisk() {
+        this.setAuthor(null);
+        this.setTitle(null);
+        this.setGenre(null);
+        this.setDuration(0);
     }
 
 }
