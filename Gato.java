@@ -29,6 +29,7 @@ public class Gato extends Mamifero {
     /**
      * toString: muestra todos los datos del gato
      */
+    @Override
     public String toString() {
         String name;
         String sex;

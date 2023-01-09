@@ -23,6 +23,7 @@ public class Incidencia {
         pendientes++;
     }
 
+    @Override
     public String toString() {
         return "Incidencia " + this.getNumIncidencia() + " - Puesto: " + this.getPuesto() + " - "
                 + this.getDescripcionIncidencia() + " - " + this.getEstado();

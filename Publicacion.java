@@ -11,6 +11,7 @@ public abstract class Publicacion {
     String titulo;
     int anyo;
 
+    @Override
     public String toString() {
         return "ISBN: " + this.isbn + ", título: " + this.titulo + ", año de publicación: " + this.anyo;
     }

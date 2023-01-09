@@ -23,6 +23,7 @@ public class Tiempo {
      * 
      * @return String con el objeto en formato 00h 00m 00s
      */
+    @Override
     public String toString() {
         return hour + "h " + minute + "m " + second + "s";
     }

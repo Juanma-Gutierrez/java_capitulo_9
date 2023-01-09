@@ -44,6 +44,7 @@ public class Caballo {
         return this.name;
     }
 
+    @Override
     public String toString() {
         String res = "\n------------------------------------------";
         res += "\nNombre: " + this.name;

@@ -27,6 +27,7 @@ public class Disk {
         this.duration = duration;
     }
 
+    @Override
     public String toString() {
         String res;
         res = "  Código: " + this.code + "\n";

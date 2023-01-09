@@ -23,6 +23,7 @@ public class Item {
         this.stock += units;
     }
 
+    @Override
     public String toString() {
         String ret = "";
         ret += String.format("%-7d ", code);
