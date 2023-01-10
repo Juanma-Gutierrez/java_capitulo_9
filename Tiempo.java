@@ -1,11 +1,11 @@
 /**
- * Tiempo: clase que gestiona el tiempo en horas, minutos y segundos
+ * Tiempo.java
  *
- * @param hour   Horas
- * @param minute Minutos
- * @param second Segundos
- * @return String con la hora, minutos y segundos indicados
+ * @version: 10/01/2023
+ * @author: Juan Manuel Gutiérrez
+ *          https://github.com/Juanma-Gutierrez
  */
+
 public class Tiempo {
     // Var declarations
     private int hour;
@@ -31,8 +31,8 @@ public class Tiempo {
     /**
      * suma: Suma
      *
-     * @param
-     * @return
+     * @param tiempo2 Tiempo para sumar a la hora inicial
+     * @return Tiempo resultado de la
      */
     public Tiempo suma(Tiempo tiempo2) {
         Tiempo res;
@@ -43,38 +43,32 @@ public class Tiempo {
 
         res = new Tiempo(0, 0, 0);
         carry = 0;
-
         second = this.second + tiempo2.second;
         if (second >= 60) {
-            res.setSegundo(60 - second);
+            res.second = 60 - second;
             carry = 1;
-        } else {
-            res.setSegundo(second);
-        }
-
+        } else
+            res.second = (second);
         minute = this.minute + tiempo2.minute + carry;
         if (minute >= 60) {
-            res.setMinuto(minute - 60);
+            res.minute = minute - 60;
             carry = 1;
         } else {
-            res.setMinuto(minute);
+            res.minute = minute;
             carry = 0;
         }
-
         hour = this.hour + tiempo2.hour + carry;
-        if (hour >= 24) {
-            res.setHora(hour - 24);
-        } else {
-            res.setHora(hour);
-        }
-
+        if (hour >= 24)
+            res.hour = hour - 24;
+        else
+            res.hour = hour;
         return res;
     }
 
     /**
      * resta: Resta a Tiempo el parámetro tiempo pasado
      *
-     * @param tiempo Objeto tiempo
+     * @param tiempo Hora a restar
      * @return Tiempo resultado de la resta
      */
     public Tiempo resta(Tiempo tiempo2) {
@@ -89,82 +83,24 @@ public class Tiempo {
 
         second = this.second - tiempo2.second;
         if (second >= 60) {
-            res.setSegundo(60 - second);
+            res.second = 60 - second;
             carry = 1;
-        } else {
-            res.setSegundo(second);
-        }
-
+        } else
+            res.second = second;
         minute = this.minute - tiempo2.minute + carry;
         if (minute >= 60) {
-            res.setMinuto(minute - 60);
+            res.minute = minute - 60;
             carry = 1;
         } else {
-            res.setMinuto(minute);
+            res.minute = minute;
             carry = 0;
         }
-
         hour = this.hour - tiempo2.hour + carry;
-        if (hour >= 24) {
-            res.setHora(hour - 24);
-        } else {
-            res.setHora(hour);
-        }
-
+        if (hour >= 24)
+            res.hour = hour - 24;
+        else
+            res.hour = hour;
         return res;
     }
 
-    /**
-     * getHora: Obtiene la hora
-     *
-     * @return Hora
-     */
-    public int getHora() {
-        return this.hour;
-    }
-
-    /**
-     * setHora: Asigna el valor a hora
-     *
-     * @param h Entero con el valor de hora
-     */
-    public void setHora(int h) {
-        this.hour = h;
-    }
-
-    /**
-     * getMinuto: Obtiene el minuto
-     *
-     * @return minuto
-     */
-    public int getMinuto() {
-        return this.minute;
-    }
-
-    /**
-     * setMinuto: Asigna el valor a minuto
-     *
-     * @param m Entero con el valor de minuto
-     */
-    public void setMinuto(int m) {
-        this.minute = m;
-    }
-
-    /**
-     * getSegundo: Obtiene el segundo
-     *
-     * @return Segundo
-     */
-    public int getSegundo() {
-        return this.second;
-    }
-
-    /**
-     * setSegundo: Asigna el valor a segundo
-     *
-     * @param h Entero con el valor de segundo
-     */
-    public void setSegundo(int s) {
-        this.second = s;
-    }
 }
